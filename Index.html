@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <main class="container_calculadora">
+        <div class="result">
+            <input type="text" name="resultado" id="resultado" value="" disabled>
+            <label class="switch">
+                <input type="checkbox" id="alterartema"onclick= tema()>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="teclado">
+            <div class="colum">
+                <input type="button" style="background-color: #cccc;color: black;" value="AC" onclick= Limpar()>
+                <input type="button" style="background-color: #cccc;color: black;" value="x'" onclick="valorinput('**')">
+                <input type="button" style="background-color: #cccc;color: black;" value="%" onclick="porcentagem(value)">
+                <input type="button" style="background-color: #ffa500" value="/" onclick=valorinput(value)>
+            </div>
+            <div class="colum">
+                <input type="button" value="7" onclick=valorinput(value)>
+                <input type="button" value="8" onclick=valorinput(value)>
+                <input type="button" value="9" onclick=valorinput(value)>
+                <input type="button" style="background-color: #ffa500" value="x" onclick="valorinput('*')">
+            </div>
+            <div class="colum">
+                <input type="button" value="4" onclick=valorinput(value)>
+                <input type="button" value="5" onclick=valorinput(value)>
+                <input type="button" value="6" onclick=valorinput(value)>
+                <input type="button"  style="background-color: #ffa500" value="-" onclick=valorinput(value)>
+            </div>
+            <div class="colum">
+                <input type="button" value="1" onclick=valorinput(value)>    
+                <input type="button" value="2" onclick=valorinput(value)>    
+                <input type="button" value="3" onclick=valorinput(value)>    
+                <input type="button"  style="background-color: #ffa500" value="+" onclick=valorinput(value)>    
+
+            </div>
+            <div class="colum">
+                <input type="button" value="0" onclick=valorinput(value) id="zero">
+                <input type="button" value="." onclick=valorinput(value)>
+                <input type="button"  style="background-color: #ffa500" value="=" onclick=calculo()>
+            </div>
+        </div>
+    </main>
+    <script src="JS/Script.js"></script>
+</body>
+
+</html>
